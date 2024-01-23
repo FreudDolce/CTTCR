@@ -2,6 +2,12 @@
 
 This model contains CATCR-D and CATCR-G, where CATCR-D is a discriminative model to predict epitope-CDR3-beta pairs, and CATCR-G is a generative model to generate CDR3-beta sequences bind to a given epitope.
 
+## Environment
+
+- python: 3.9.18
+- pytorch: 2.1.0
+- CUDA: 12.2
+
 ## Train and Test data
 
 Test data used for this model can be downloaded from "".
