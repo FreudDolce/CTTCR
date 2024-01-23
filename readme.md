@@ -2,11 +2,10 @@
 
 This model contains CATCR-D and CATCR-G, where CATCR-D is a discriminative model to predict epitope-CDR3-beta pairs, and CATCR-G is a generative model to generate CDR3-beta sequences bind to a given epitope.
 
-## Environment
-
-- python: 3.9.18
-- pytorch: 2.1.0
-- CUDA: 12.2
+## Environments:
+- python 3.9.18
+- pytorch 2.1.0
+- CUDA 12.2
 
 ## Train and Test data
 
@@ -32,3 +31,8 @@ We provide data process tool to pretreat the sequence and pdb data in `DataTrans
 - The CATCR-G was trained via `e2t_Generator.py`
 - Note, in the training of RCMT and CATCR-G, a pretrained epitope encoder is recommonded. Our pretrained models were provided in the `model` folder, or you can train the encoder from beginning.
 - The demo for CATCR-D is `D_test.py`, and demo for CATCR-G is `BeamSearch.py`
+
+# Demo
+
+- We provide the demo data in '', entire data in '', and model in ''
+- To run the `D_test.py` and `BeamSearch.py` for test, you can download the demodata and model files and replace the corresponding folder in the CTTCR folder, and run the two files.
