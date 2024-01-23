@@ -37,5 +37,4 @@ We provide a data processing tool to preprocess the sequence and PDB data in Dat
 ## Demo
 
 - The demo for CATCR-D is `D_test.py', and demo from CATCR-G is `BeamSearch.py`
-- We provide the demo data in [https://pan.baidu.com/s/1nTzZLeauK9v0wHngg0NtgQ?pwd=catr].
 - To run the demo programmes, you can download the demodata from [https://pan.baidu.com/s/1nTzZLeauK9v0wHngg0NtgQ?pwd=catr].
