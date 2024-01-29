@@ -39,13 +39,8 @@ NODE_DICT = pd.read_csv('node_index.csv', names=['seq', 'count', 'ind'])
 NODE_DICT.set_index('ind', inplace=True, drop=True)
 LOAD_MODEL = 'model'
 
-ORIGIN_SRC_ATTN = torch.load(
-    CFG.resultspace + LOAD_MODEL + '/src_attentions_1.pt'
-)
-ORIGIN_TGT_ATTN = torch.load(
-    CFG.resultspace + LOAD_MODEL + '/tgt_attentions_1.pt'
-)
-
+ORIGIN_SRC_ATTN = torch.load('./model/src_attentions_1.pt')
+ORIGIN_TGT_ATTN = torch.load('./model/tgt_attentions_1.pt')
 
 TRAIN_FOLDER = CFG.projectdata + 'b' + \
     str(cfg.DataPara().BATCHSIZE) + '_' + 'UnsupTrainBatch/'
@@ -233,15 +228,12 @@ def validation(model, criterion):
 
 if __name__ == '__main__':
     # ==============================================
-    ORIGIN_SRC_DICT = torch.load(
-        CFG.resultspace + LOAD_MODEL + '/CATCR_D_1.pt'
-    ).src_encoder.state_dict()
-    ORIGIN_TGT_DICT = torch.load(
-        CFG.resultspace + LOAD_MODEL + '/CATCR_D_1.pt'
-    ).tgt_encoder.state_dict()
-    ORIGIN_FC_DICT = torch.load(
-        CFG.resultspace + LOAD_MODEL + '/CATCR_D_1.pt'
-    ).fc.state_dict()
+    ORIGIN_SRC_DICT = torch.load('./model/CATCR_D.pt'
+                                 ).src_encoder.state_dict()
+    ORIGIN_TGT_DICT = torch.load('./model/CATCR_D.pt'
+                                 ).tgt_encoder.state_dict()
+    ORIGIN_FC_DICT = torch.load('./model/CATCR_D.pt'
+                                ).fc.state_dict()
     # ==============================================
     if os.path.exists(CFG.resultspace + modelsavename) == False:
         os.makedirs(CFG.resultspace + modelsavename)

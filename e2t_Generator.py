@@ -50,19 +50,10 @@ c = copy.deepcopy
 
 # load model from supervised training model.
 # ==============================================
-LOAD_MODEL = 'model'
-ORIGIN_DIS_DICT = torch.load(
-    CFG.resultspace + LOAD_MODEL + '/CATCR_D_1.pt'
-).state_dict()
-ORIGIN_SRC_DICT = torch.load(
-    CFG.resultspace + LOAD_MODEL + '/CATCR_D_1.pt'
-).src_encoder.state_dict()
-ORIGIN_SRC_ATTN = torch.load(
-    CFG.resultspace + LOAD_MODEL + '/src_attentions_1.pt'
-).sum(1)
-STRUC_MODEL = torch.load(
-    cfg.Cfg().resultspace + LOAD_MODEL + '/RCMT.pt'
-)
+ORIGIN_DIS_DICT = torch.load('./model/CATCR_D.pt').state_dict()
+ORIGIN_SRC_DICT = torch.load('./model/CATCR_D.pt').src_encoder.state_dict()
+ORIGIN_SRC_ATTN = torch.load('./model/src_attentions_1.pt').sum(1)
+STRUC_MODEL = torch.load('./model/RCMT.pt')
 for param in STRUC_MODEL.parameters():
     param.requires_grad = False
 # ==============================================

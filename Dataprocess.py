@@ -43,7 +43,7 @@ def DataLoder(batch_folder, batch_num,
         epi_seq = np.load(
             batch_folder + 'seq_y_batch_b_' + str(batch_num) + '.npy'
         )
-    elif coding_method == 'onehot':
+    else:
         tcr_seq = np.load(
             batch_folder + 'seq_batch_o_' + str(batch_num) + '.npy'
         )

@@ -18,10 +18,9 @@ TEST_FOLDER = './demo_data/b128_UnsupTestBatch/'
 NUM_TEST = int(len(os.listdir(TEST_FOLDER)) / 10)
 
 
-corr_info = pd.read_csv(cfg.Cfg().projectdata +
-                        'TrainData/node_TCR-PEP-MHC.csv', index_col=[0])
-use_model = torch.load(cfg.Cfg().resultspace + '/model/CATCR_G.pt')
-sturc_model = torch.load(cfg.Cfg().resultspace + 'model/RCMT.pt')
+corr_info = pd.read_csv('./node_TCR-PEP-MHC.csv', index_col=[0])
+use_model = torch.load('./model/CATCR_G.pt')
+sturc_model = torch.load('./model/RCMT.pt')
 for param in use_model.parameters():
     param.require_grad = False
 

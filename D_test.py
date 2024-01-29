@@ -40,9 +40,7 @@ modelsavename = str(t.tm_year) + '-' + str(t.tm_mon) + '-' + str(t.tm_mday) + \
 
 torch.backends.cudnn.enabled = False
 
-test_model = torch.load(
-    CFG.resultspace + 'model/CATCR_D_1.pt'
-)
+test_model = torch.load('./model/CATCR_D.pt')
 
 
 def get_sup_accuracy(pred, label, mode='max'):  # mode: 'round' or 'max
@@ -79,11 +77,11 @@ def test(model):
 
             pred_t, *_ = model(tcr_t_d, epi_t_d, tcr_t_s, epi_t_s)
             total_acc += get_sup_accuracy(pred_t, label_t)
-            print('Batch: ', t_batch, ' Loss: ',
+            print('Batch: ', t_batch, ' Precision: ',
                   get_sup_accuracy(pred_t, label_t))
 
         avr_t_acc = total_acc / NUM_TEST
-        print('Final accuracy: ', avr_t_acc)
+        print('Final precision: ', avr_t_acc)
         print('----------------------------------------------------------------')
     return avr_t_acc
 
