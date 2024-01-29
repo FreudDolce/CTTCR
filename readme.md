@@ -47,4 +47,4 @@ We provide a data processing tool to preprocess the sequence and PDB data in Dat
 ## Demo
 
 - We provided demo for CATCR-D and CATCR-G. The demo for CATCR-D is `D_test.py`, and demo from CATCR-G is `BeamSearch.py`
-- To run the demo programmes, you can download the pre-trained model from [https://1drv.ms/u/s!ArPas8clhc3Fg6EXGzXiMpYUxh8JZg?e=CjeSeB], and replace the corresponding folders in the CTTCR folder. Demo data in the demo_data folder in CTTCR
+- Pretrained models are in the `model` folder under `CTTCR` and emo data are in the `demo_data` folder under `CTTCR`.
