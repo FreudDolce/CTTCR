@@ -61,7 +61,7 @@ class TrainPara():
         # self.OPTIMFUNC = 'Adam'
         self.LOSSWEIGHT = 1.0
         self.WEIGHTDECAY = 0  # 1e-7
-        self.TRAIN_SAMPLE_FRAC = 0.2
+        self.TRAIN_SAMPLE_FRAC = 1
 
 
 class CNNPara():
